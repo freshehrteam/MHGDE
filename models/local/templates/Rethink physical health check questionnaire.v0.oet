@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>40134b97-70b9-4174-9c75-1b129224d229</id>
+  <name>Rethink physical health check questionnaire.v0</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="Physical health check questionnaire">
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/content" name="General health and lifestyle">
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="1.1 Diagnosed physical health conditions">
+        <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" concept_name="Problem/Diagnosis" path="/items">
+          <Rule path="/data[at0001]/items[at0002]" name="Diagnosed physical health condition name" />
+          <Rule path="/data[at0001]/items[at0009]" max="0" />
+          <Rule path="/data[at0001]/items[at0012]" max="0" />
+          <Rule path="/data[at0001]/items[at0003]" max="0" />
+          <Rule path="/data[at0001]/items[at0005]" max="0" />
+          <Rule path="/data[at0001]/items[at0072]" max="0" />
+          <Rule path="/data[at0001]/items[at0030]" max="0" />
+          <Rule path="/data[at0001]/items[at0073]" max="0" />
+          <Rule path="/data[at0001]/items[at0069]" max="0" />
+          <Rule path="/protocol[at0032]/items[at0070]" max="0" />
+        </Item>
+        <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion_global.v1" concept_name="Exclusion - global" max="1" path="/items" name="No known diagnosed physical health conditions">
+          <Rule path="/data[at0001]/items[at0002]">
+            <nameConstraint>
+              <excludedValues>local::at0004</excludedValues>
+              <excludedValues>local::at0005</excludedValues>
+              <excludedValues>local::at0006</excludedValues>
+              <excludedValues>local::at0007</excludedValues>
+            </nameConstraint>
+          </Rule>
+          <Rule path="/data[at0001]/items[at0011]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="1.2 Disability or impairment">
+        <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" concept_name="Problem/Diagnosis" path="/items">
+          <Rule path="/data[at0001]/items[at0002]" name="Disability or impairment" />
+          <Rule path="/data[at0001]/items[at0009]" max="0" />
+          <Rule path="/data[at0001]/items[at0012]" max="0" />
+          <Rule path="/data[at0001]/items[at0003]" max="0" />
+          <Rule path="/data[at0001]/items[at0005]" max="0" />
+          <Rule path="/data[at0001]/items[at0072]" max="0" />
+          <Rule path="/data[at0001]/items[at0030]" max="0" />
+          <Rule path="/data[at0001]/items[at0073]" max="0" />
+          <Rule path="/data[at0001]/items[at0069]" max="0" />
+          <Rule path="/protocol[at0032]/items[at0070]" max="0" />
+        </Item>
+        <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion_global.v1" concept_name="Exclusion - global" max="1" path="/items" name="No known disability or impairment">
+          <Rule path="/data[at0001]/items[at0002]">
+            <nameConstraint>
+              <excludedValues>local::at0004</excludedValues>
+              <excludedValues>local::at0005</excludedValues>
+              <excludedValues>local::at0006</excludedValues>
+              <excludedValues>local::at0007</excludedValues>
+            </nameConstraint>
+          </Rule>
+          <Rule path="/data[at0001]/items[at0011]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="1.3 Family history">
+        <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.family_history.v2" concept_name="Family history" path="/items">
+          <Rule path="/data[at0001]/items[at0002]" max="0" />
+          <Rule path="/data[at0001]/items[at0028]" max="1" name="Heart disease" />
+          <Rule path="/data[at0001]/items[at0028 and name/value='Heart disease']/items[at0029]" default="Heart disease" />
+          <Rule path="/data[at0001]/items[at0028 and name/value='Heart disease']/items[at0030]" max="0" />
+          <Rule path="/data[at0001]/items[at0028]" max="1" clone="true" name="Stroke" />
+          <Rule path="/data[at0001]/items[at0028 and name/value='Stroke']/items[at0029]" default="Stroke" />
+          <Rule path="/data[at0001]/items[at0028 and name/value='Stroke']/items[at0030]" max="0" />
+          <Rule path="/data[at0001]/items[at0028]" max="1" clone="true" name="Cancer" />
+          <Rule path="/data[at0001]/items[at0028 and name/value='Cancer']/items[at0029]" default="Cancer" />
+          <Rule path="/data[at0001]/items[at0028 and name/value='Cancer']/items[at0030]" max="0" />
+          <Rule path="/data[at0001]/items[at0028]" max="1" clone="true" name="Diabetes" />
+          <Rule path="/data[at0001]/items[at0028 and name/value='Diabetes']/items[at0029]" default="Diabetes" />
+          <Rule path="/data[at0001]/items[at0028 and name/value='Diabetes']/items[at0030]" max="0" />
+          <Rule path="/data[at0001]/items[at0028]" clone="true" name="Per problem" />
+          <Rule path="/data[at0001]/items[at0003]" max="0" />
+          <Rule path="/protocol[at0025]/items[at0026]" max="0" />
+        </Item>
+        <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion_global.v1" concept_name="Exclusion - global" max="1" path="/items" name="No known family history">
+          <Rule path="/data[at0001]/items[at0002]">
+            <nameConstraint>
+              <excludedValues>local::at0003</excludedValues>
+              <excludedValues>local::at0005</excludedValues>
+              <excludedValues>local::at0006</excludedValues>
+              <excludedValues>local::at0007</excludedValues>
+            </nameConstraint>
+          </Rule>
+          <Rule path="/data[at0001]/items[at0011]" max="0" />
+        </Item>
+      </Item>
+    </Content>
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/content" name="Screening checks">
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="3.3.A Checks for women">
+        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v0" concept_name="Laboratory test result" max="1" path="/items" name="Last smear test">
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" default="Cervical cytology test" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]" max="0" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0075]" max="0" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]" max="0" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0100]" max="0" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0098]" max="0" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0101]" max="0" />
+          <Rule path="/data[at0001]/events[at0002]/state[at0112]/items[at0113]" max="0" />
+          <Rule path="/protocol[at0004]/items[at0068]" max="0" />
+          <Rule path="/protocol[at0004]/items[at0094]" max="0" />
+          <Rule path="/protocol[at0004]/items[at0111]" max="0" />
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.laboratory_test_analyte.v0" concept_name="Laboratory test analyte" path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]">
+            <Rule path="/items[at0001]" name="Cervical cytology result">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Text</includedTypes>
+                <includedTypes>Coded_text</includedTypes>
+              </constraint>
+            </Rule>
+            <Rule path="/items[at0004]" max="0" />
+            <Rule path="/items[at0005]" max="0" />
+            <Rule path="/items[at0006]" max="0" />
+          </Items>
+        </Item>
+        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.menstrual_cycle.v0" concept_name="Menstrual cycle" path="/items" />
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="3.4 Vitals and tests" />
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
+    <digest id="MD5-CAM-1.0.1">15173A4BF38FA171E47BBE704F3E0940</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.adhoc.v1">
+    <digest id="MD5-CAM-1.0.1">3237F5891EC3C7D52CA1D2043D1DF62F</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+    <digest id="MD5-CAM-1.0.1">767E39313E0D137FA9E95FE7477DEEF8</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion_global.v1">
+    <digest id="MD5-CAM-1.0.1">CBD3F597907DCC9BE51553069E405BB1</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.family_history.v2">
+    <digest id="MD5-CAM-1.0.1">9C5F2B93C53BFD0F2D9D5F9020883DAB</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v0">
+    <digest id="MD5-CAM-1.0.1">1BB8DC23A187DFCB9D9639E283647B75</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.laboratory_test_analyte.v0">
+    <digest id="MD5-CAM-1.0.1">15015A5970361A8C4C9409257A6B2A1B</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.menstrual_cycle.v0">
+    <digest id="MD5-CAM-1.0.1">D843ED14DF454BA94728F6ED2C2158A8</digest>
+  </integrity_checks>
+</template>

@@ -1,0 +1,477 @@
+archetype (adl_version=1.4; uid=6681fbf8-28e5-4dff-b838-7a01bfbcdb49)
+    openEHR-EHR-OBSERVATION.reqol10.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-06-21">
+        ["name"] = <"Hildegard McNicoll">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"For the recording of the responses to the ReQoL-10 questionnaire.">
+            use = <"Use to record the responses of the ReQoL-10 (Recovering Quality of Life) questionnaire.
+
+There are two versions of ReQoL: a short 10-item version (ReQoL-10) and a 20-item version (ReQoL-20). The initial 10 items of the longer version are the same as the shorter version.
+The two versions provide practitioners with a choice of measures according to their need.
+
+ReQoL-20 can be used initially to aid assessment and also be used at the end of an intervention. It might also be used for research studies.
+
+ReQoL-10 can be used for weekly or regular monitoring. It can also be used within the session to review progress and be used as a way of identifying areas of collaborative work that would be beneficial to the service user.
+
+Both versions can be used by the practitioner within the session as feedback to the service user by making comparisons with previously completed forms.">
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["references"] = <"www.reqol.group.shef.ac.uk/cliniciannote.pdf cited 21-Jun-2018.
+
+www.reqol.org.uk/p/essential-reqol-resources-to-download.html cited 21-Jun-2018.
+">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"4e2db6934dc8a88c35e93d7f89ab6fa0">
+        ["build_uid"] = <"b4c0a450-5d4e-36b8-937c-4faa7fdf1a19">
+    >
+
+definition
+    OBSERVATION[at0000] matches {
+        data matches {
+            HISTORY[at0001] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    POINT_EVENT[at0002] matches {
+                        data matches {
+                            ITEM_TREE[at0003] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0005] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0006],
+                                            1|[local::at0007],
+                                            2|[local::at0008],
+                                            3|[local::at0009],
+                                            4|[local::at0010]
+                                        }
+                                    }
+                                    ELEMENT[at0011] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0012],
+                                            1|[local::at0013],
+                                            2|[local::at0014],
+                                            3|[local::at0015],
+                                            4|[local::at0016]
+                                        }
+                                    }
+                                    ELEMENT[at0017] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0019],
+                                            1|[local::at0020],
+                                            2|[local::at0021],
+                                            3|[local::at0022],
+                                            4|[local::at0023]
+                                        }
+                                    }
+                                    ELEMENT[at0024] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0025],
+                                            1|[local::at0026],
+                                            2|[local::at0027],
+                                            3|[local::at0028],
+                                            4|[local::at0029]
+                                        }
+                                    }
+                                    ELEMENT[at0031] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0032],
+                                            1|[local::at0033],
+                                            2|[local::at0034],
+                                            3|[local::at0035],
+                                            4|[local::at0036]
+                                        }
+                                    }
+                                    ELEMENT[at0038] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0039],
+                                            1|[local::at0040],
+                                            2|[local::at0041],
+                                            3|[local::at0042],
+                                            4|[local::at0043]
+                                        }
+                                    }
+                                    ELEMENT[at0044] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0045],
+                                            1|[local::at0046],
+                                            2|[local::at0047],
+                                            3|[local::at0048],
+                                            4|[local::at0049]
+                                        }
+                                    }
+                                    ELEMENT[at0050] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0051],
+                                            1|[local::at0052],
+                                            2|[local::at0053],
+                                            3|[local::at0054],
+                                            4|[local::at0055]
+                                        }
+                                    }
+                                    ELEMENT[at0056] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0058],
+                                            1|[local::at0059],
+                                            2|[local::at0060],
+                                            3|[local::at0061],
+                                            4|[local::at0062]
+                                        }
+                                    }
+                                    ELEMENT[at0057] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0063],
+                                            1|[local::at0064],
+                                            2|[local::at0065],
+                                            3|[local::at0066],
+                                            4|[local::at0067]
+                                        }
+                                    }
+                                    ELEMENT[at0068] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_COUNT matches {
+                                                magnitude matches {|>0..<40|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[at0004] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0030] occurrences matches {0..*} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[at0018] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[at0037] occurrences matches {0..1} matches {
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"ReQoL-10">
+                    description = <"ReQoL-10 (Recovering Quality of Life) questionnaire.">
+                >
+                ["at0001"] = <
+                    text = <"History">
+                    description = <"*">
+                >
+                ["at0002"] = <
+                    text = <"Any Event">
+                    description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+                >
+                ["at0003"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0004"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0005"] = <
+                    text = <"Difficult to get started">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they found it difficult to get started with everyday tasks in the last week.">
+                    comment = <"Exact questionnaire wording: 'I found it difficult to get started with everyday tasks'.">
+                >
+                ["at0006"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they found it difficult to get started with everyday tasks most or all of the time in the last week.">
+                >
+                ["at0007"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they found it difficult to get started with everyday tasks often in the last week.">
+                >
+                ["at0008"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they found it difficult to get started with everyday tasks sometimes in the last week.">
+                >
+                ["at0009"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they found it difficult to get started with everyday tasks only occasionally in the last week.">
+                >
+                ["at0010"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they found it difficult to get started with everyday tasks none of the time in the last week">
+                >
+                ["at0011"] = <
+                    text = <"Able to trust others">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they felt able to trust others in the last week.">
+                    comment = <"Exact questionnaire wording: 'I felt able to trust others'.">
+                >
+                ["at0012"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they felt able to trust others none of the time in the last week.">
+                >
+                ["at0013"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they felt able to trust others only occasionally in the last week.">
+                >
+                ["at0014"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they felt able to trust others sometimes in the last week.">
+                >
+                ["at0015"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they felt able to trust others often in the last week.">
+                >
+                ["at0016"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they felt able to trust others most or all of the time in the last week.">
+                >
+                ["at0017"] = <
+                    text = <"Unable to cope">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they felt unable to cope in the last week.">
+                    comment = <"Exact questionnaire wording: 'I felt unable to cope'.">
+                >
+                ["at0018"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0019"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they felt unable to cope most or all of the time in the last week.">
+                >
+                ["at0020"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they felt unable to cope often in the last week.">
+                >
+                ["at0021"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they felt unable to cope sometimes in the last week.">
+                >
+                ["at0022"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they felt unable to cope only occasionally in the last week.">
+                >
+                ["at0023"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they felt unable to cope none of the time in the last week.">
+                >
+                ["at0024"] = <
+                    text = <"Do things they wanted to">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they could do the things they wanted to in the last week.">
+                    comment = <"Exact questionnaire wording: 'I could do the things I wanted to'.">
+                >
+                ["at0025"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they could the things they wanted to do none of the time in the last week.">
+                >
+                ["at0026"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they could the things they wanted to do only occasionally in the last week.">
+                >
+                ["at0027"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they could the things they wanted to do sometimes in the last week.">
+                >
+                ["at0028"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they could the things they wanted to do often in the last week.">
+                >
+                ["at0029"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they could the things they wanted to do most or all of the time in the last week.">
+                >
+                ["at0030"] = <
+                    text = <"Confounding factors">
+                    description = <"Record any issues or factors that may impact on the score or interpretation.">
+                >
+                ["at0031"] = <
+                    text = <"Felt happy">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they felt happy in the last week.">
+                    comment = <"Exact questionnaire wording: 'I felt happy'.">
+                >
+                ["at0032"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they felt happy none of the time in the last week.">
+                >
+                ["at0033"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they felt happy only occasionally in the last week.">
+                >
+                ["at0034"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they felt happy sometimes in the last week.">
+                >
+                ["at0035"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they felt happy often in the last week.">
+                >
+                ["at0036"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they felt happy most or all of the time in the last week.">
+                >
+                ["at0037"] = <
+                    text = <"Extension">
+                    description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                    comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+                >
+                ["at0038"] = <
+                    text = <"Life not worth living">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they thought their life was not worth living in the last week.">
+                    comment = <"Exact questionnaire wording: 'I thought my life was not worth living'.">
+                >
+                ["at0039"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they thought their life was not worth living most or all of the time in the last week.">
+                >
+                ["at0040"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they thought their life was not worth living often in the last week.">
+                >
+                ["at0041"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they thought their life was not worth living sometimes in the last week.">
+                >
+                ["at0042"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they thought their life was not worth living only occasionally in the last week.">
+                >
+                ["at0043"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they thought their life was not worth living none of the time in the last week.">
+                >
+                ["at0044"] = <
+                    text = <"Enjoyed what they did">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they enjoyed what they did in the last week.">
+                    comment = <"Exact questionnaire wording: 'I enjoyed what I did'.">
+                >
+                ["at0045"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they enjoyed what they did none of the time in the last week.">
+                >
+                ["at0046"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they enjoyed what they did only occasionally in the last week.">
+                >
+                ["at0047"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they enjoyed what they did sometimes in the last week.">
+                >
+                ["at0048"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they enjoyed what they did often in the last week.">
+                >
+                ["at0049"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they enjoyed what they did most or all of the time in the last week.">
+                >
+                ["at0050"] = <
+                    text = <"Hopeful about future">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they felt hopeful about their future in the last week.">
+                    comment = <"Exact questionnaire wording: 'I felt hopeful about my future'.">
+                >
+                ["at0051"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they felt hopeful about their future none of the time in the last week.">
+                >
+                ["at0052"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they felt hopeful about their future only occasionally in the last week.">
+                >
+                ["at0053"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they felt hopeful about their future sometimes in the last week.">
+                >
+                ["at0054"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they felt hopeful about their future often in the last week.">
+                >
+                ["at0055"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they felt hopeful about their future most or all of the time in the last week.">
+                >
+                ["at0056"] = <
+                    text = <"Felt lonely">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they felt lonely in the last week.">
+                    comment = <"Exact questionnaire wording: 'I felt lonely'.">
+                >
+                ["at0057"] = <
+                    text = <"Confident in themselves">
+                    description = <"Assessment by the subject of the questionnaire of the extent to which they felt confident in themselves in the last week.">
+                    comment = <"Exact questionnaire wording: 'I felt confident in myself'.">
+                >
+                ["at0058"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they felt lonely most or all of the time in the last week.">
+                >
+                ["at0059"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they felt lonely often in the last week.">
+                >
+                ["at0060"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they felt lonely sometimes in the last week.">
+                >
+                ["at0061"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they felt lonely only occasionally in the last week.">
+                >
+                ["at0062"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they felt lonely none of the time in the last week.">
+                >
+                ["at0063"] = <
+                    text = <"None of the time">
+                    description = <"The subject reports that they felt confident in themselves none of the time in the last week.">
+                >
+                ["at0064"] = <
+                    text = <"Only occasionally">
+                    description = <"The subject reports that they felt confident in themselves only occasionally in the last week.">
+                >
+                ["at0065"] = <
+                    text = <"Sometimes">
+                    description = <"The subject reports that they felt confident in themselves sometimes in the last week.">
+                >
+                ["at0066"] = <
+                    text = <"Often">
+                    description = <"The subject reports that they felt confident in themselves often in the last week.">
+                >
+                ["at0067"] = <
+                    text = <"Most or all of the time">
+                    description = <"The subject reports that they felt confident in themselves most or all of the time in the last week.">
+                >
+                ["at0068"] = <
+                    text = <"Total score">
+                    description = <"Total score calculated as the sum of the individual responses.">
+                >
+            >
+        >
+    >
